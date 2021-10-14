@@ -85,6 +85,7 @@ bool Person::CheckID(int ID){
         if (m_friends[index]->m_ID == ID){
             return true;
         }
+        index++;
     }
     
     return false;
