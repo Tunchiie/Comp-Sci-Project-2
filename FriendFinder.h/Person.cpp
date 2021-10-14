@@ -21,7 +21,7 @@ Person::Person(){
     m_ID = 0;
     m_friendCount = 0;
     for (int i = 0; i < MAX_FRIENDS; i++){
-      m_friends[i] = nullptr;
+        m_friends[i] = nullptr;
     }
 }
 
@@ -36,19 +36,24 @@ Person::Person(string fName, string lName, int age, int ID){
     m_friendCount = 0;
     m_ID = ID;
     for (int i = 0; i < MAX_FRIENDS; i++){
-      m_friends[i] = nullptr;
+        m_friends[i] = nullptr;
     }
 }
 // Name: AddFriend
-// Desc - A person pointer is stored from the roster of people in an organizati\
-on
+// Desc - A person pointer is stored from the roster of people in an organization
 // Preconditions - A person pointer is passed
 // Postconditions - A person pointer is added to this person's m_friend's array
 //                  if not at maximum and not already in the array
 void Person::AddFriend(Person* new_friend){
     if (m_friendCount < MAX_FRIENDS){
-        m_friends[m_friendCount] = new_friend;
-        m_friendCount++;
+        if(CheckID(new_friend->m_ID) == false){
+            m_friends[m_friendCount] = new_friend;
+            m_friendCount++;
+            cout << "You are now friends with " << new_friend->m_fName << "!" << endl;
+        }
+        else{
+            cout << new_friend->m_fName << "is already your friend" << endl;
+        }
     }
     else{
         cout << "Friend list already full" << endl;
@@ -57,8 +62,7 @@ void Person::AddFriend(Person* new_friend){
 // Name: RemoveFriend
 // Desc - Removes a person pointer from this person's m_friend array
 // Preconditions - Person pointer exists in m_friend
-// Postconditions - Person is removed from m_friend and all pointers are moved \
-towards front
+// Postconditions - Person is removed from m_friend and all pointers are moved towards front
 void Person::RemoveFriend(){
     int choice = 0;
     DisplayFriends();
@@ -66,6 +70,7 @@ void Person::RemoveFriend(){
         cout << "Who would you like to remove?" << endl;
         cin >> choice;
     }
+    
     m_friends[(choice - 1)] = nullptr;
     m_friendCount--;
     
@@ -95,8 +100,8 @@ void Person::DisplayFriends(){
     else{
         cout << "Friend List for " << m_fName << endl;
         for (int i = 0; i < MAX_FRIENDS; i++){
-            if (m_friends[(i - 1)] != nullptr){
-                cout << i << ". ";
+            if (m_friends[i] != nullptr){
+                cout << i + 1<< ". ";
                 m_friends[i]->DisplayDetails();
                 cout << endl;
             }
@@ -111,10 +116,8 @@ void Person::DisplayDetails(){
     if (m_fName == ""){
         cout << "No such person exists" << endl;
     }
-    
     else{
-        cout << m_fName << " " << m_lName << "(" << m_age << " yrs) " << m_ID <\
-        < endl;
+        cout << m_fName << " " << m_lName << " (" << m_age << " yrs) " << m_ID << endl;
     }
 }
 // Name: SetDetails
