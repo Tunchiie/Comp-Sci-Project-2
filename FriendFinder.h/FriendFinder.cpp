@@ -5,11 +5,11 @@
 //  Created by Adetunji Fasiku on 13/10/2021.
 //
 
-#include "FriendFinder.hpp"
+#include "FriendFinder.h"
 #include <iostream>
 #include <string>
-#include "Organization.hpp" //Must be implemented before FriendFinder
-#include "Person.hpp" //Must be implemented before FriendFinder
+#include "Organization.h" //Must be implemented before FriendFinder
+#include "Person.h" //Must be implemented before FriendFinder
 
 using namespace std;
 
