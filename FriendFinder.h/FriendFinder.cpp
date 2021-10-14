@@ -81,7 +81,7 @@ void FriendFinder::Start(){
         DisplayMenu(choice);
         switch(choice){
             case 1:
-                
+                cout << "You are: " << m_me.DisplayDetails();
                 m_organization.DisplayRoster();
                 break;
                 
