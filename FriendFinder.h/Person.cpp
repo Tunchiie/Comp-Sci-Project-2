@@ -20,6 +20,9 @@ Person::Person(){
     m_age = 0;
     m_ID = 0;
     m_friendCount = 0;
+    for (int i = 0; i < MAX_FRIENDS; i++){
+      m_friends[i] = nullptr;
+    }
 }
 
 // Name: Person
@@ -32,6 +35,9 @@ Person::Person(string fName, string lName, int age, int ID){
     m_age = age;
     m_friendCount = 0;
     m_ID = ID;
+    for (int i = 0; i < MAX_FRIENDS; i++){
+      m_friends[i] = nullptr;
+    }
 }
 // Name: AddFriend
 // Desc - A person pointer is stored from the roster of people in an organizati\
@@ -60,13 +66,12 @@ void Person::RemoveFriend(){
         cout << "Who would you like to remove?" << endl;
         cin >> choice;
     }
-    delete m_friends[(choice - 1)];
     m_friends[(choice - 1)] = nullptr;
+    m_friendCount--;
     
 }
 // Name: CheckID
-// Desc - Checks to see if a specific person ID exists in m_friends - Note: IDs\
-will always be unique in proj2
+// Desc - Checks to see if a specific person ID exists in m_friends - Note: IDs will always be unique in proj2
 // Preconditions - m_friends is populated
 // Postconditions - Returns true if id exists in m_friends else false
 bool Person::CheckID(int ID){
