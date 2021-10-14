@@ -5,7 +5,7 @@
 //  Created by Adetunji Fasiku on 13/10/2021.
 //
 
-#include "Person.hpp"
+#include "Person.h"
 #include <iostream>
 #include <string>
 using namespace std;
