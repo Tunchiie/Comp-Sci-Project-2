@@ -76,11 +76,7 @@ void Organization::DisplayRoster(){
 // Postconditions - Returns pointer for the person chosen from list
 Person* Organization::GetPerson(){
     int desiredIndex = 0;
-    for (int i = 0; i < m_numRoster; ++i){
-        cout << i << " ";
-        m_roster[(i - 1)].DisplayDetails();
-        cout << endl;
-    }
+    DisplayRoster();
     while (desiredIndex < 1 || desiredIndex > m_numRoster){
         cin >> desiredIndex;
     }
