@@ -4,7 +4,7 @@
 //
 //  Created by Adetunji Fasiku on 13/10/2021.
 //
-#include "Organization.hpp"
+#include "Organization.h"
 #include <iostream>
 #include <string>
 #include <fstream>
