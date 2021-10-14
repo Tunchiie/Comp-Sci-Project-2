@@ -93,7 +93,12 @@ void FriendFinder::Start(){
             case 3:
                 
                 new_friend = m_organization.GetPerson();
-                m_me.AddFriend(new_friend);
+                if (CheckID(new_friend) == false){
+                    m_me.AddFriend(new_friend);
+                }
+                else{
+                    cout << new_friend->m_fName << " is already a friend." << endl;
+                }
                 break;
 
             case 4:
