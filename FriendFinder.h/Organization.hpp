@@ -4,12 +4,12 @@
 //Date:    9/29/2021
 //Desc: This file contains the header details for an Organization class.
 
-#ifndef Organization_hpp
-#define Organization_hpp
+#ifndef Organization_h
+#define Organization_h
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "Person.hpp" //Must be implemented before Organization
+#include "Person.h" //Must be implemented before Organization
 using namespace std;
 
 //Constants
