@@ -79,6 +79,10 @@ Person* Organization::GetPerson(){
     DisplayRoster();
     while (desiredIndex < 1 || desiredIndex > m_numRoster){
         cin >> desiredIndex;
+        if(desiredIndex < 1 || desiredIndex > m_numRoster){
+            cout << desiredIndex << " is either bigger or smaller than the size of your organization" << endl;
+        }
+    
     }
     Person* new_friend = &m_roster[(desiredIndex - 1)];
     return new_friend;
