@@ -1,5 +1,5 @@
-#ifndef PERSON_HPP //Protects against multiple inclusion
-#define PERSON_HPP //Protects against multiple inclusion
+#ifndef PERSON_H //Protects against multiple inclusion
+#define PERSON_H //Protects against multiple inclusion
 //Name: Person.h
 //Project: CMSC 202 Project 2, Fall 2021
 //Author:  Jeremy Dixon
