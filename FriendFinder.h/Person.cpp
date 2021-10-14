@@ -52,7 +52,7 @@ void Person::AddFriend(Person* new_friend){
             cout << "You are now friends with " << new_friend->m_fName << "!" << endl;
         }
         else{
-            cout << new_friend->m_fName << "is already your friend" << endl;
+            cout << new_friend->m_fName << " is already your friend" << endl;
         }
     }
     else{
