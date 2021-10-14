@@ -52,8 +52,14 @@ void FriendFinder::GetDetails(){
 // Preconditions - None
 // Postconditions - Called from Start updates integer passed
 void FriendFinder::DisplayMenu(int &choice){
-    
-    while (choice < 1 || choice > 5){
+    cout << "What would you like to do?" << endl;
+    cout << "1. Display Entire Organization" << endl;
+    cout << "2. Display Friend List" << endl;
+    cout << "3. Search for a Friend" << endl;
+    cout << "4. Remove Friend" << endl;
+    cout << "5. Exit" << endl;
+    cin >> choice;
+    while (choice < 0 || choice > 5){
         cout << "What would you like to do?" << endl;
         cout << "1. Display Entire Organization" << endl;
         cout << "2. Display Friend List" << endl;
@@ -62,6 +68,7 @@ void FriendFinder::DisplayMenu(int &choice){
         cout << "5. Exit" << endl;
         cin >> choice;
     }
+    cout << endl;
 }
 
 // Name: Start
@@ -73,7 +80,6 @@ void FriendFinder::DisplayMenu(int &choice){
 // Postconditions - Runs until user enters 4. Thanks user for usage. Ends application
 void FriendFinder::Start(){
     int choice = 0;
-    bool quit = false;
     GetDetails();
     Person* new_friend;
     
@@ -83,9 +89,9 @@ void FriendFinder::Start(){
             case 1:
                 cout << "You are: ";
                 m_me.DisplayDetails();
+                cout << endl;
                 m_organization.DisplayRoster();
                 break;
-                
             case 2:
                 
                 m_me.DisplayFriends();
@@ -94,20 +100,14 @@ void FriendFinder::Start(){
             case 3:
                 
                 new_friend = m_organization.GetPerson();
-                if (CheckID(new_friend) == false){
-                    m_me.AddFriend(new_friend);
-                }
-                else{
-                    cout << new_friend->m_fName << " is already a friend." << endl;
-                }
+                m_me.AddFriend(new_friend);
                 break;
-
+                
             case 4:
                 m_me.RemoveFriend();
                 break;
                 
             case 5:
-                quit = true;
                 break;
                 
         }
