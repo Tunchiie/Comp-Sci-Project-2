@@ -68,7 +68,6 @@ void FriendFinder::DisplayMenu(int &choice){
         cout << "5. Exit" << endl;
         cin >> choice;
     }
-    cout << endl;
 }
 
 // Name: Start
@@ -87,23 +86,25 @@ void FriendFinder::Start(){
         DisplayMenu(choice);
         switch(choice){
             case 1:
+                cout << endl;
                 cout << "You are: ";
                 m_me.DisplayDetails();
                 cout << endl;
                 m_organization.DisplayRoster();
                 break;
             case 2:
-                
+                cout << endl;
                 m_me.DisplayFriends();
                 break;
                 
             case 3:
-                
+                cout << endl;
                 new_friend = m_organization.GetPerson();
                 m_me.AddFriend(new_friend);
                 break;
                 
             case 4:
+                cout << endl;
                 m_me.RemoveFriend();
                 break;
                 
