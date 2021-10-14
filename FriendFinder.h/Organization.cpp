@@ -64,7 +64,6 @@ void Organization::LoadRoster(){
 // Preconditions - m_roster is populated                                        
 // Postconditions - Displays a numbered list of people                          
 void Organization::DisplayRoster(){
-  cout << m_numRoster << endl;
   for (int i = 0; i < m_numRoster; i++){
     cout << i + 1<< " ";
     m_roster[i].DisplayDetails();
