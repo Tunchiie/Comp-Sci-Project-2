@@ -10,7 +10,7 @@
 #include <iostream>
 #include <string>
 #include "Organization.h" //Must be implemented before FriendFinder
-#include "Person.hpp" //Must be implemented before FriendFinder
+#include "Person.h" //Must be implemented before FriendFinder
 
 using namespace std;
 
