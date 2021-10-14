@@ -4,12 +4,12 @@
 //Date:    9/29/2021
 //Desc: This file contains the header details for a FriendFinder class.
 
-#ifndef FRIEND_FINDER_HPP //Protects against multiple inclusion
-#define FRIEND_FINDER_HPP //Protects against multiple inclusion
+#ifndef FRIEND_FINDER_H //Protects against multiple inclusion
+#define FRIEND_FINDER_H //Protects against multiple inclusion
 
 #include <iostream>
 #include <string>
-#include "Organization.hpp" //Must be implemented before FriendFinder
+#include "Organization.h" //Must be implemented before FriendFinder
 #include "Person.hpp" //Must be implemented before FriendFinder
 
 using namespace std;
