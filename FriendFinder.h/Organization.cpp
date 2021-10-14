@@ -30,11 +30,9 @@ void Organization::SetName(){
     }
 }
 // Name: LoadRoster                                                             
-// Desc - Sets m_fileName by asking user. Then populates all of the people load\
-ed from file                                                                    
+// Desc - Sets m_fileName by asking user. Then populates all of the people loaded from file                                                                    
 // Preconditions - m_fileName exists. m_roster empty                            
-// Postconditions - Asks user for m_fileName. Loads data from file and populate\
-s m_roster                                                                      
+// Postconditions - Asks user for m_fileName. Loads data from file and populates m_roster                                                                      
 void Organization::LoadRoster(){
     string fName, lName, age, ID;
     int real_age, real_ID;
@@ -71,8 +69,7 @@ void Organization::DisplayRoster(){
   }
 }
 // Name: GetPerson                                                              
-// Desc - Displays a list of people in m_roster and user enters number of desir\
-ed person.                                                                      
+// Desc - Displays a list of people in m_roster and user enters number of desired person.                                                                      
 //        Returns pointer of that person in m_roster                            
 // Preconditions - m_roster is populated                                        
 // Postconditions - Returns pointer for the person chosen from list             
