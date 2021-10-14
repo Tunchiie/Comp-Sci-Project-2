@@ -5,9 +5,9 @@
 
 #include <iostream>
 #include <string>
-#include "Organization.hpp"
-#include "Person.hpp"
-#include "FriendFinder.hpp"
+#include "Organization.h"
+#include "Person.h"
+#include "FriendFinder.h"
 
 using namespace std;
 
